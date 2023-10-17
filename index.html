@@ -12,7 +12,7 @@
 <div id="header">
     <div class="container">
         <nav>
-            <img src="images/logo.png" alt="logo">
+            <img src="images/logo.png" alt="logo" id="logo">
             <ul id="sidemenu">
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -24,6 +24,7 @@
             </ul>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
+        
         <div class="header-text">
             <p>Aspiring AI/ML Engineer</p>
             <h1>Hello, Im <span>Roy</span><br>Welcome to my cave</h1>
@@ -112,7 +113,7 @@
                     <h3>Highschool kids robotics training</h3>
                     <p>Imagine a room brimming with high school students, robots whirring to life, and contagious excitement in the air. That's the scene of my high school robotics education project! As the tech-savvy mentor, I introduced these young minds to the thrilling world of robotics.
                         Together, we dived into a whirlwind of discovery, where students learned to design, program, and watch their robots come to life. But beyond nuts and bolts, we cultivated a sense of curiosity and camaraderie. We celebrated victories, problem-solved as a team, and, most importantly, embodied the values I cherish: love, community, and integrity.</p>
-                    <a href="https://www.canva.com/design/DAE91Q3RLvc/xM7QFTUT9X99IjXiMAIncA/view?utm_content=DAE91Q3RLvc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://www.canva.com/design/DAE91Q3RLvc/xM7QFTUT9X99IjXiMAIncA/view?utm_content=DAE91Q3RLvc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="work">
@@ -121,7 +122,7 @@
                     <h3>MIR Certification and Debswana Pilot Program</h3>
                     <p>In the ever-evolving world of technology, I'm proud to have achieved MIR certification - a testament to my commitment to innovation and excellence. This certification is more than just a badge; it signifies my dedication to mastering the latest technology trends.<br/>To put this knowledge into practice, I embarked on a pilot program with Debswana, a leader in the mining industry. Together, we explored cutting-edge solutions and innovative technologies. This program was a thrilling opportunity to showcase how MIR certification and forward-thinking ideas can make a real impact on the ground.
                     </p>
-                    <a href="https://youtu.be/THucaGtiN0I"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://youtu.be/THucaGtiN0I" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>    
             <div class="work">
@@ -131,7 +132,7 @@
                     <p>In the Botswana Development Corporation's Business Den, we were among the top ten contenders, presenting a healthcare solution that puts patients in control of their health data.
                         <br>Our approach is simple yet powerful. We believe patients should have ownership and control over their health information, leading to more informed decisions and better collaboration with healthcare professionals.
                        <br> This project wasn't just about innovation; it was rooted in values like love, community, and integrity. We're working towards a future where healthcare is more patient-centric and empowering.</p>
-                    <a href="https://www.facebook.com/TheVoiceBW/videos/2028693264141478"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://www.facebook.com/TheVoiceBW/videos/2028693264141478" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>    
         </div>
@@ -225,19 +226,20 @@
                 <p><i class="fa-solid fa-inbox"></i>mohuburoy@gmail.com</p>
                 <p><i class="fa-solid fa-square-phone-flip"></i>+267 74 689 264</p>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/ricardo.mohubu"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
-                    <a href="https://www.instagram.com/roy_mohubu/"><i class="fa-brands fa-square-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/roy-junior-ricardo-mohubu-60118b123/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/ricardo.mohubu" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-x-twitter" target="_blank"></i></a>
+                    <a href="https://www.instagram.com/roy_mohubu/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/roy-junior-ricardo-mohubu-60118b123/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
                 <a href="images/Roy-Resume.pdf" class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
-                <form>
-                    <input type="text" name="Name" placeholder="Your Name" required>
+                <form action="https://formspree.io/f/mbjvqwpj"
+                method="POST" id="my_form">
+                    <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your email" required>
-                    <textarea name="Message" rows="10" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
+                    <textarea name="message" rows="10" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2" onclick="clearForm()">Submit</button>
 
                 </form>
             </div>
@@ -286,6 +288,12 @@
     }
     function closemenu(){
         sidemeu.style.right = "-200px";
+    }
+</script>
+<script>
+    function clearForm(){
+        var form = document.getElementById(my_form);
+        if(form)
     }
 </script>
 </body>

@@ -452,6 +452,8 @@ nav .fa-solid{
     .copyright{
         font-size: 14px;
     }
-    
+    #logo{
+        width: 160px;
+    }
     
 }
